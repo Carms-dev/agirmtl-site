@@ -1,0 +1,21 @@
+header {
+    background: transparent;
+    // position: absolute;
+    width: 100%;
+}
+
+.container#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav {
+    display: flex;
+}
+.nav > * {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    a {
+        color: var(--grey);
+    }
+}
