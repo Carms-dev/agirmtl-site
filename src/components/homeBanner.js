@@ -1,24 +1,37 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
-class HomeBanner extends Component {
-    render() {
-        return (
-          <div class="home-banner">
-            <div className="container" id="home-banner">
-              <div className="banner-text">
-                <h1>AGIR Montréal</h1>
-                <h2>Support • Empower • Together</h2>
-                <p>BY AND FOR LGBTQ+ MIGRANT COMMUNITY IN MONTREAL</p>
-              </div>
-              <form action="#" className="card-subscribe">
-                <p>Subscribe to our monthly newsletter to stay updated!</p>
-                <input type="text" placeholder="Enter Email"/>
-                <button type="submit">Sign Up</button>
-              </form>
-            </div>
-          </div>
-        )
+const HomeBanner = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      fileName: file(relativePath: { eq: "blm_mtl.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
+  `)
+
+  return (
+    <div
+      style={
+        {
+          // maxHeight: "50vh",
+        }
+      }
+    >
+      <Img
+        fluid={data.fileName.childImageSharp.fluid}
+        style={{ 
+          maxHeight: "60vh",
+        }}
+        alt="Black Lives Matter"
+      />
+    </div>
+  )
 }
 
 export default HomeBanner;
