@@ -1,12 +1,72 @@
 .home-banner {
-    // background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://images.unsplash.com/photo-1594838323182-f71a4409d467?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80);
-    // height: 100vh;
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: 25% 50%;
+    // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/blm_mtl_crop.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1594838323182-f71a4409d467?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);
+    background-color: darkslategrey;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    background-attachment: fixed;
 
-    .banner-text {
-        border: 1px solid var(--yellow);
-        color: var(--black);
+}
+
+.container#home-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
+    
+}
+.banner-text > * {
+    margin: 0.75rem 0;
+}
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    h1 {
+        color: var(--white);
+        border-bottom: 0.25rem solid hotpink;
+        margin-bottom: 0;
+    }
+    h2 {
+        color: var(--off-white);
+    }
+    p {
+        color: var(--off-white);
+    }
+}
+
+.card-subscribe {
+    text-align: center;
+    max-width: 300px;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--off-white);
+    border-radius: var(--border-r);
+
+    input {
+        color: var(--white);
+        border-bottom: 1px solid var(--white);
+    }
+    button {
+        color: hotpink;
+        &:hover {
+            cursor: pointer;
+            border-bottom: 0.1rem solid hotpink;
+        }
+    }
+}
+.card-subscribe > * {
+    margin: 0.5rem 0;
+}
+
+@media (min-width: 850px) {
+    .container#home-banner {
+        flex-direction: row;
+        padding-bottom: 150px;
     }
 }

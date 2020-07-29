@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `AGIR Montreal`,
-    description: `AGIR Montreal Official Website | v3.0`,
+    title: `AGIR Montréal`,
+    description: `AGIR Montréal Official Website | v3.0`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -11,6 +11,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: false,
+        // Add any options here
       },
     },
     `gatsby-transformer-sharp`,

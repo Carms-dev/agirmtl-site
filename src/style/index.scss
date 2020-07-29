@@ -1,8 +1,14 @@
 @import "./components/header";
 @import "./components/banner";
+@import "./components/button";
 
 .container {
     max-width: 960px;
+    margin: 0 auto;
+    padding: 1.45rem 1.0875rem;
+}
+.container-wide {
+    max-width: 1440px;
     margin: 0 auto;
     padding: 1.45rem 1.0875rem;
 }
